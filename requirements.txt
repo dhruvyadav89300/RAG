@@ -11,3 +11,4 @@ PyPDF2
 python-dotenv
 faiss-cpu
 giskard[llm]
+bs4
