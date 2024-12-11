@@ -90,6 +90,7 @@ def initialize_chains(llm, retriever):
 url = st.text_input(label="Enter the URL")
 go = st.button(label="Go")
 
+# UI
 
 if go and url:
     # Regenerate the retriever if new URL or not cached
