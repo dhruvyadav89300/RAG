@@ -34,6 +34,7 @@ def initialize_llm(api_key: str):
 llm = initialize_llm(groq_api_key)
 
 def _get_session():
+    """Gets the session ID """
     from streamlit.runtime import get_instance
     from streamlit.runtime.scriptrunner import get_script_run_ctx
     runtime = get_instance()
