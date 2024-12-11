@@ -52,6 +52,7 @@ if "store" not in st.session_state:
     st.session_state.store = {}
 
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
+    """Returns message history """
     if session_id not in st.session_state.store:
         st.session_state.store[session_id] = ChatMessageHistory()
     return st.session_state.store[session_id]
