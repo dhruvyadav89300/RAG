@@ -34,6 +34,7 @@ def initialize_llm(api_key: str):
 llm = initialize_llm(groq_api_key)
 
 def _get_session():
+    """Gets the session ID """
     from streamlit.runtime import get_instance
     from streamlit.runtime.scriptrunner import get_script_run_ctx
     runtime = get_instance()
@@ -51,6 +52,7 @@ if "store" not in st.session_state:
     st.session_state.store = {}
 
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
+    """Returns message history """
     if session_id not in st.session_state.store:
         st.session_state.store[session_id] = ChatMessageHistory()
     return st.session_state.store[session_id]
@@ -90,6 +92,7 @@ def initialize_chains(llm, retriever):
 url = st.text_input(label="Enter the URL")
 go = st.button(label="Go")
 
+# UI
 
 if go and url:
     # Regenerate the retriever if new URL or not cached

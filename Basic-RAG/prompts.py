@@ -17,7 +17,7 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# QA Prompts
+# QA Prompt
 system_prompt = (
     "You are an assistant for question-answering tasks. "
     "Use the following pieces of retrieved context to answer "
